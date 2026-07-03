@@ -1,0 +1,25 @@
+{
+    "name": "Al Ponte di Schiavonia - Trattoria e Pizzeria",
+    "short_name": "Al Ponte",
+    "description": "Trattoria e Pizzeria a Forlì dal 1978. Ordina online senza commissioni.",
+    "start_url": "index.html",
+    "scope": "./",
+    "display": "standalone",
+    "background_color": "#faf8f5",
+    "theme_color": "#8B1A1A",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "images/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "images/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "categories": ["food", "restaurant"],
+    "lang": "it-IT"
+}

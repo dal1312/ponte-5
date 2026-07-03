@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatti • Al Ponte di Schiavonia | Forlì</title>
+    <meta name="description" content="Contattaci per prenotare un tavolo o ordinare. Siamo in Viale Salinatore 86, Forlì. Aperti Mar-Dom 12-14:30 e 19-23.">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+    <div class="container nav-container">
+        <a href="index.html" class="logo">
+            <span class="logo-icon">🍷</span>
+            <span class="logo-text">Al Ponte<br><small>di Schiavonia</small></span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="ordina.html">Ordina</a></li>
+            <li><a href="contatti.html" class="active">Contatti</a></li>
+        </ul>
+        <a href="https://wa.me/39054329448" class="btn-prenota-nav" target="_blank" rel="noopener">Prenota</a>
+        <button class="mobile-menu-btn" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="ordina.html">Ordina</a>
+    <a href="contatti.html">Contatti</a>
+    <a href="https://wa.me/39054329448" class="btn-whatsapp">Prenota su WhatsApp</a>
+</div>
+
+<header class="page-hero">
+    <div class="container">
+        <span class="section-label light">VIENI A TROVARCI</span>
+        <h1 class="page-title"><em>Contatti</em></h1>
+        <p class="page-subtitle">Siamo a Forlì • Dal 1978</p>
+    </div>
+</header>
+
+<main class="contacts-page">
+    <div class="container">
+        <div class="contacts-grid">
+
+            <div class="contact-card animate-on-scroll">
+                <div class="contact-icon">📍</div>
+                <h3>Dove Siamo</h3>
+                <p>Viale Salinatore 86<br>47121 Forlì (FC)</p>
+                <a href="https://maps.google.com/?q=Viale+Salinatore+86+Forli" target="_blank" rel="noopener" class="btn-link">
+                    Apri in Google Maps →
+                </a>
+            </div>
+
+            <div class="contact-card animate-on-scroll" data-delay="100">
+                <div class="contact-icon">📞</div>
+                <h3>Chiamaci</h3>
+                <p>Per prenotazioni o ordini</p>
+                <a href="tel:+39054329448" class="btn-link">+39 0543 29448</a>
+            </div>
+
+            <div class="contact-card animate-on-scroll" data-delay="200">
+                <div class="contact-icon">💬</div>
+                <h3>Scrivici</h3>
+                <p>Rispondiamo subito</p>
+                <a href="https://wa.me/39054329448" target="_blank" rel="noopener" class="btn-link">WhatsApp</a>
+            </div>
+
+            <div class="contact-card animate-on-scroll" data-delay="300">
+                <div class="contact-icon">🕐</div>
+                <h3>Orari</h3>
+                <ul class="hours-list">
+                    <li><span>Lunedì</span> <span class="closed">Chiuso</span></li>
+                    <li><span>Martedì – Domenica</span> <span>12:00 – 14:30</span></li>
+                    <li><span>Martedì – Domenica</span> <span>19:00 – 23:00</span></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- MAPPA INTEGRATA -->
+        <div class="map-container animate-on-scroll">
+            <iframe 
+                src="https://www.google.com/maps?q=Viale+Salinatore+86,+47121+Forli+FC&output=embed" 
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy"
+                title="Mappa ristorante">
+            </iframe>
+        </div>
+
+        <!-- CTA PRENOTAZIONE -->
+        <div class="cta-box animate-on-scroll">
+            <h2>Hai già scelto cosa mangiare?</h2>
+            <p>Prenota il tuo tavolo o ordina direttamente senza commissioni.</p>
+            <div class="cta-buttons">
+                <a href="https://wa.me/39054329448?text=Salve,%20vorrei%20prenotare%20un%20tavolo" class="btn btn-whatsapp" target="_blank" rel="noopener">
+                    💬 Prenota su WhatsApp
+                </a>
+                <a href="ordina.html" class="btn btn-light">
+                    🛵 Ordina Online
+                </a>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-bottom">
+            <p>© 2026 Al Ponte di Schiavonia • Tutti i diritti riservati</p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/menu-data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

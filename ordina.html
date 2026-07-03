@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordina Online • Al Ponte di Schiavonia</title>
+    <meta name="description" content="Ordina online senza commissioni: ritiro in loco o consegna a domicilio a Forlì.">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+    <div class="container nav-container">
+        <a href="index.html" class="logo">
+            <span class="logo-icon">🍷</span>
+            <span class="logo-text">Al Ponte<br><small>di Schiavonia</small></span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="ordina.html" class="active">Ordina</a></li>
+            <li><a href="contatti.html">Contatti</a></li>
+        </ul>
+        <a href="https://wa.me/39054329448" class="btn-prenota-nav" target="_blank" rel="noopener">Prenota</a>
+        <button class="mobile-menu-btn" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="ordina.html">Ordina</a>
+    <a href="contatti.html">Contatti</a>
+    <a href="https://wa.me/39054329448" class="btn-whatsapp">Prenota su WhatsApp</a>
+</div>
+
+<header class="page-hero">
+    <div class="container">
+        <span class="section-label light">ZERO COMMISSIONI</span>
+        <h1 class="page-title">Ordina <em>Online</em></h1>
+        <p class="page-subtitle">Componi il tuo ordine e ricevilo a casa o ritiralo in loco</p>
+    </div>
+</header>
+
+<main class="order-page">
+    <div class="container">
+        <div class="order-layout">
+
+            <!-- CATEGORIE MENU -->
+            <div class="order-menu">
+                <h2>🍕 Pizze</h2>
+                <div class="order-items" id="pizze-list"></div>
+
+                <h2>🥗 Antipasti</h2>
+                <div class="order-items" id="antipasti-list"></div>
+
+                <h2>🍝 Primi</h2>
+                <div class="order-items" id="primi-list"></div>
+
+                <h2>🥩 Secondi</h2>
+                <div class="order-items" id="secondi-list"></div>
+
+                <h2>🥔 Contorni</h2>
+                <div class="order-items" id="contorni-list"></div>
+
+                <h2>🍰 Dessert</h2>
+                <div class="order-items" id="dessert-list"></div>
+            </div>
+
+            <!-- CARRELLO -->
+            <aside class="order-cart" id="cart">
+                <div class="cart-header">
+                    <h3>🛒 Il tuo ordine</h3>
+                    <button class="cart-clear" id="clearCart">Svuota</button>
+                </div>
+                
+                <div class="cart-items" id="cartItems">
+                    <div class="cart-empty">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                        <p>Il carrello è vuoto.<br>Aggiungi qualcosa di buono!</p>
+                    </div>
+                </div>
+
+                <div class="cart-summary">
+                    <div class="summary-row">
+                        <span>Subtotale</span>
+                        <span id="subtotal">€0,00</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Totale</span>
+                        <span id="total">€0,00</span>
+                    </div>
+                </div>
+
+                <form class="cart-form" id="orderForm">
+                    <h4>I tuoi dati</h4>
+                    <div class="form-group">
+                        <label>Nome e Cognome *</label>
+                        <input type="text" name="name" required placeholder="Mario Rossi">
+                    </div>
+                    <div class="form-group">
+                        <label>Telefono *</label>
+                        <input type="tel" name="phone" required placeholder="+39 333 1234567">
+                    </div>
+                    <div class="form-group">
+                        <label>Modalità *</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="mode" value="ritiro" checked>
+                                <span>🏠 Ritiro in loco</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="mode" value="consegna">
+                                <span>🛵 Consegna a domicilio</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group" id="addressField" style="display:none;">
+                        <label>Indirizzo di consegna *</label>
+                        <input type="text" name="address" placeholder="Via, numero civico">
+                    </div>
+                    <div class="form-group">
+                        <label>Note (opzionale)</label>
+                        <textarea name="notes" rows="2" placeholder="Allergie, richieste particolari..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-large btn-full" id="submitOrder" disabled>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+                        Invia Ordine via WhatsApp
+                    </button>
+                    <p class="form-disclaimer">Cliccando, verrai reindirizzato a WhatsApp con il riepilogo del tuo ordine.</p>
+                </form>
+            </aside>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-bottom">
+            <p>© 2026 Al Ponte di Schiavonia • Tutti i diritti riservati</p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/menu-data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

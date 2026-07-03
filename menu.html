@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu • Al Ponte di Schiavonia | Trattoria e Pizzeria Forlì</title>
+    <meta name="description" content="Menu completo: antipasti, primi romagnoli, 32 pizze al forno a legna, secondi di carne e pesce, contorni e dolci. Ingredienti freschi e tradizione dal 1978.">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="manifest" href="manifest.json">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+    <div class="container nav-container">
+        <a href="index.html" class="logo">
+            <span class="logo-icon">🍷</span>
+            <span class="logo-text">Al Ponte<br><small>di Schiavonia</small></span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html" class="active">Menu</a></li>
+            <li><a href="ordina.html">Ordina</a></li>
+            <li><a href="contatti.html">Contatti</a></li>
+        </ul>
+        <a href="https://wa.me/39054329448" class="btn-prenota-nav" target="_blank" rel="noopener">Prenota</a>
+        <button class="mobile-menu-btn" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="ordina.html">Ordina</a>
+    <a href="contatti.html">Contatti</a>
+    <a href="https://wa.me/39054329448" class="btn-whatsapp">Prenota su WhatsApp</a>
+</div>
+
+<header class="page-hero">
+    <div class="container">
+        <span class="section-label light">I NOSTRI PIATTI</span>
+        <h1 class="page-title">Il Nostro <em>Menu</em></h1>
+        <p class="page-subtitle">Tradizione romagnola, ingredienti freschi e forno a legna • Dal 1978</p>
+    </div>
+</header>
+
+<!-- FILTRI CATEGORIE STICKY -->
+<div class="menu-filters" id="menuFilters">
+    <div class="container">
+        <button class="filter-btn active" data-category="all">Tutti</button>
+        <button class="filter-btn" data-category="antipasti">Antipasti</button>
+        <button class="filter-btn" data-category="primi">Primi</button>
+        <button class="filter-btn" data-category="pizze">Pizze</button>
+        <button class="filter-btn" data-category="secondi">Secondi</button>
+        <button class="filter-btn" data-category="contorni">Contorni</button>
+        <button class="filter-btn" data-category="dessert">Dessert</button>
+    </div>
+</div>
+
+<main class="menu-main">
+    <div class="container">
+        <div class="menu-grid" id="menu-grid">
+            <!-- Popolato dinamicamente da main.js -->
+        </div>
+
+        <div class="allergens-disclaimer animate-on-scroll">
+            <p><strong>⚠️ Informazioni allergeni:</strong> I prezzi sono in Euro, IVA inclusa. Gli ingredienti sono soggetti a variazioni stagionali. In caso di allergie o intolleranze alimentari, si prega di informare il personale di sala.</p>
+        </div>
+    </div>
+</main>
+
+<!-- FLOATING CART -->
+<div class="floating-cart" id="floatingCart">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+    <span class="cart-count">0</span>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-bottom">
+            <p>© 2026 Al Ponte di Schiavonia • Tutti i diritti riservati</p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/menu-data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
